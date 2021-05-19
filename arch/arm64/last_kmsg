@@ -1,0 +1,719 @@
+ram console header, hw_status: 2, fiq step 41.
+Not Clear, old status is 2.
+ <3>.(3)[1:swapper/0]<GYROSCOPE> read power ctl register err!
+[    3.470359] <3>.(3)[1:swapper/0]<GYROSCOPE> ITG1010_i2c_probe: err = -1
+[    3.470383] <3>.(3)[1:swapper/0]ITG-1010A: probe of 2-0068 failed with error -1
+[    3.470436] <3>.(3)[1:swapper/0]i2c-core: driver [ITG-1010A] using legacy suspend method
+[    3.470442] <3>.(3)[1:swapper/0]i2c-core: driver [ITG-1010A] using legacy resume method
+[    3.470464] <3>.(3)[1:swapper/0][name:gyroscope&]<GYROSCOPE> i=1
+[    3.470471] <3>.(3)[1:swapper/0][name:gyroscope&]<GYROSCOPE> i=2
+[    3.470477] <3>.(3)[1:swapper/0][name:gyroscope&]<GYROSCOPE> i=3
+[    3.470484] <3>.(3)[1:swapper/0][name:gyroscope&]<GYROSCOPE> i=4
+[    3.470490] <3>.(3)[1:swapper/0][name:gyroscope&]<GYROSCOPE>  gyro_real_driver_init fail
+[    3.470496] <3>.(3)[1:swapper/0]<GYROSCOPE> gyro real driver init fail
+[    3.470502] <3>.(3)[1:swapper/0]<GYROSCOPE> ----gyro_probe fail !!!
+[    3.470507] <3>.(3)[1:swapper/0]<GYROSCOPE> failed to register gyro driver
+[    3.470521] <3>.(3)[1:swapper/0]initcall gyro_init+0x0/0x440 returned -19 after 920 usecs
+[    3.470538] <3>.(3)[1:swapper/0]calling  mag_init+0x0/0x58c @ 1
+[    3.470546] <3>.(3)[1:swapper/0][name:mag&]<MAGNETIC> mag_init
+[    3.470552] <3>.(3)[1:swapper/0][name:mag&]<MAGNETIC> +++++++++++++mag_probe!!
+[    3.470564] <3>.(3)[1:swapper/0][name:mag&]<MAGNETIC> mag_context_alloc_object++++
+[    3.470779] <3>.(3)[1:swapper/0][name:mag&]<MAGNETIC> mag_context_alloc_object----
+[    3.470787] <3>.(3)[1:swapper/0][name:mag&]<MAGNETIC>  mag_real_driver_init +
+[    3.470793] <3>.(3)[1:swapper/0][name:mag&]<MAGNETIC>  i=0
+[    3.470800] <3>.(3)[1:swapper/0][name:mag&]<MAGNETIC>  mag try to init driver akm09911
+[    3.470904] <3>.(3)[1:swapper/0][name:akm09911&][AKM09911] akm09911_i2c_probe
+[    3.470917] <3>.(3)[1:swapper/0]Unable to handle kernel NULL pointer dereference at virtual address 00000004
+[    3.470923] <3>.(3)[1:swapper/0]pgd = ffffffc0011d5000
+[    3.470941] <3>.(3)[1:swapper/0][00000004] *pgd=00000000bd816003, *pud=00000000bd816003, *pmd=00000000bd817003, *pte=0060000010221707
+[    3.470951] <3>-(3)[1:swapper/0]Internal error: Oops: 96000005 [#1] PREEMPT SMP
+[    4.471030] <3>-(3)[1:swapper/0]disable aee kernel api
+[    4.471033] <3>-(3)[1:swapper/0]Non-crashing CPUs did not react to IPI
+[    4.471046] <3>-(3)[1:swapper/0]CPU: 3 PID: 1 Comm: swapper/0 Tainted: G        W      3.18.35+ #1
+[    4.471051] <3>-(3)[1:swapper/0]Hardware name: MT6737 (DT)
+[    4.471059] <3>-(3)[1:swapper/0]task: ffffffc003052000 ti: ffffffc003068000 task.ti: ffffffc003068000
+[    4.471075] <3>-(3)[1:swapper/0]PC is at akm09911_i2c_probe+0xac/0x3a8
+[    4.471084] <3>-(3)[1:swapper/0]LR is at akm09911_i2c_probe+0x7c/0x3a8
+[    4.471092] <3>-(3)[1:swapper/0]pc : [<ffffffc00037bed0>] lr : [<ffffffc00037bea0>] pstate: 60000145
+[    4.471097] <3>-(3)[1:swapper/0]sp : ffffffc00306bae0
+[    4.471108] <3>-(3)[1:swapper/0]x29: ffffffc00306bae0 x28: ffffffc000fc6140 
+[    4.471118] <3>-(3)[1:swapper/0]x27: ffffffc075a26c00 x26: ffffffc000e50000 
+[    4.471128] <3>-(3)[1:swapper/0]x25: ffffffc00306bb58 x24: ffffffc00306bb78 
+[    4.471138] <3>-(3)[1:swapper/0]x23: ffffffc000fc6000 x22: ffffffc000a1f000 
+[    4.471148] <3>-(3)[1:swapper/0]x21: ffffffc074ab05c0 x20: ffffffc000ee3000 
+[    4.471157] <3>-(3)[1:swapper/0]x19: ffffffc000fc6078 x18: 0000000000000fd8 
+[    4.471166] <3>-(3)[1:swapper/0]x17: 0000000000000000 x16: 0000000000000000 
+[    4.471176] <3>-(3)[1:swapper/0]x15: 0000000000000000 x14: 0ffffffffffffffe 
+[    4.471185] <3>-(3)[1:swapper/0]x13: 0000000000000008 x12: 0101010101010101 
+[    4.471195] <3>-(3)[1:swapper/0]x11: 7f7f7f7f7f7f7f7f x10: fefefefefefeff2f 
+[    4.471204] <3>-(3)[1:swapper/0]x9 : 7f7f7f7f7f7f7f7f x8 : ffffffc074ab0600 
+[    4.471214] <3>-(3)[1:swapper/0]x7 : 0000000000000000 x6 : ffffffc074ab05c0 
+[    4.471223] <3>-(3)[1:swapper/0]x5 : 0000000000000140 x4 : 0000000000000000 
+[    4.471233] <3>-(3)[1:swapper/0]x3 : ffffffc000e509f0 x2 : ffffffc000fc6140 
+[    4.471242] <3>-(3)[1:swapper/0]x1 : ffffffc000c12b33 x0 : 0000000000000000 
+[    4.471248] <3>-(3)[1:swapper/0]
+[    4.471248] <3>PC: 0xffffffc00037be50:
+[    4.471267] <3>-(3)[1:swapper/0]be50  910263b8 9101e3b9 a9025bf5 79404401 a9007f1f a9017f1f a9027f1f a9007f3f
+[    4.471285] <3>-(3)[1:swapper/0]be70  a9017f3f 36100081 f00044a1 912c1021 97fd674a f00060c0 52901a01 d2800402
+[    4.471303] <3>-(3)[1:swapper/0]be90  f0006257 90003536 f9426400 97f808f5 aa0003f5 b4000ee0 b00056ba 9101e2f3
+[    4.471321] <3>-(3)[1:swapper/0]beb0  9127c343 9103227c f00044a1 aa1c03e2 912ccc21 f90037a3 f9400460 f90006a0
+[    4.471339] <3>-(3)[1:swapper/0]bed0  b9400400 b90012a0 91028260 b90016bf 97f57796 f00044a1 aa1303e0 912d1421
+[    4.471357] <3>-(3)[1:swapper/0]bef0  aa1c03e2 97f57791 f94037a3 f00044a1 912d6021 aa1c03e2 91062060 97f55d99
+[    4.471375] <3>-(3)[1:swapper/0]bf10  f9004e7b 91242293 f90002bb 9112c260 f9006375 79404401 36100081 f00044a1
+[    4.471393] <3>-(3)[1:swapper/0]bf30  912d8421 97fd671d 910343a0 52800021 381a0c1f 97ffff79 aa0003fb 2a0003f3
+[    4.471398] <3>-(3)[1:swapper/0]
+[    4.471398] <3>LR: 0xffffffc00037be20:
+[    4.471417] <3>-(3)[1:swapper/0]be20  d65f03c0 a9b37bfd 910003fd a90153f3 90005b54 91242293 f90067bf a90573fb
+[    4.471435] <3>-(3)[1:swapper/0]be40  aa0003fb 91122260 a90363f7 a9046bf9 910263b8 9101e3b9 a9025bf5 79404401
+[    4.471453] <3>-(3)[1:swapper/0]be60  a9007f1f a9017f1f a9027f1f a9007f3f a9017f3f 36100081 f00044a1 912c1021
+[    4.471471] <3>-(3)[1:swapper/0]be80  97fd674a f00060c0 52901a01 d2800402 f0006257 90003536 f9426400 97f808f5
+[    4.471488] <3>-(3)[1:swapper/0]bea0  aa0003f5 b4000ee0 b00056ba 9101e2f3 9127c343 9103227c f00044a1 aa1c03e2
+[    4.471506] <3>-(3)[1:swapper/0]bec0  912ccc21 f90037a3 f9400460 f90006a0 b9400400 b90012a0 91028260 b90016bf
+[    4.471524] <3>-(3)[1:swapper/0]bee0  97f57796 f00044a1 aa1303e0 912d1421 aa1c03e2 97f57791 f94037a3 f00044a1
+[    4.471542] <3>-(3)[1:swapper/0]bf00  912d6021 aa1c03e2 91062060 97f55d99 f9004e7b 91242293 f90002bb 9112c260
+[    4.471548] <3>-(3)[1:swapper/0]
+[    4.471548] <3>SP: 0xffffffc00306ba60:
+[    4.471566] <3>-(3)[1:swapper/0]ba60  00ee3000 ffffffc0 74ab05c0 ffffffc0 00a1f000 ffffffc0 00fc6000 ffffffc0
+[    4.471585] <3>-(3)[1:swapper/0]ba80  0306bb78 ffffffc0 0306bb58 ffffffc0 00e50000 ffffffc0 75a26c00 ffffffc0
+[    4.471603] <3>-(3)[1:swapper/0]baa0  00fc6140 ffffffc0 0306bae0 ffffffc0 0037bea0 ffffffc0 0306bae0 ffffffc0
+[    4.471621] <3>-(3)[1:swapper/0]bac0  0037bed0 ffffffc0 60000145 00000000 75a26c00 ffffffc0 00fc6030 ffffffc0
+[    4.471639] <3>-(3)[1:swapper/0]bae0  0306bbb0 ffffffc0 006fb9a8 ffffffc0 00a1fe78 ffffffc0 75a26c00 ffffffc0
+[    4.471657] <3>-(3)[1:swapper/0]bb00  75a26c20 ffffffc0 0037be24 ffffffc0 75a26c04 ffffffc0 00e3c000 ffffffc0
+[    4.471674] <3>-(3)[1:swapper/0]bb20  00000003 00000000 cee19f82 00000000 00fc6028 ffffffc0 00fc6030 ffffffc0
+[    4.471692] <3>-(3)[1:swapper/0]bb40  00fc6028 ffffffc0 00e509f0 ffffffc0 00fc6028 ffffffc0 00000000 00000000
+[    4.471699] <3>-(3)[1:swapper/0]
+[    4.471699] <3>X1: 0xffffffc000c12ab3:
+[    4.471717] <3>-(3)[1:swapper/0]2ab0  5d263131 4d4b415b 31393930 52205d31 61656c65 64206573 63697665 6f6e2065
+[    4.471735] <3>-(3)[1:swapper/0]2ad0  613a6564 39306d6b 0a313139 3c330100 4e47414d 43495445 7325203e 20642520
+[    4.471753] <3>-(3)[1:swapper/0]2af0  7325203a 74657220 6f207972 20726576 000a6425 6d616e5b 6b613a65 3939306d
+[    4.471771] <3>-(3)[1:swapper/0]2b10  5d263131 4d4b415b 31393930 61205d31 39306d6b 5f313139 5f633269 626f7270
+[    4.471789] <3>-(3)[1:swapper/0]2b30  26000a65 736e6573 61645f65 6d5f6174 78657475 65732600 726f736e 7461645f
+[    4.471807] <3>-(3)[1:swapper/0]2b50  756d5f61 00786574 65706f26 71775f6e 616e5b00 613a656d 39306d6b 26313139
+[    4.471825] <3>-(3)[1:swapper/0]2b70  4b415b5d 3939304d 205d3131 4d4b4120 65686320 64206b63 63697665 64692065
+[    4.471843] <3>-(3)[1:swapper/0]2b90  616e5b00 613a656d 39306d6b 26313139 4b415b5d 3939304d 205d3131 4d4b4120
+[    4.471861] <3>-(3)[1:swapper/0]2bb0  65686320 64206b63 63697665 64692065 25203d20 6e5b0078 3a656d61 306d6b61
+[    4.471867] <3>-(3)[1:swapper/0]
+[    4.471867] <3>X2: 0xffffffc000fc60c0:
+[    4.471884] <3>-(3)[1:swapper/0]60c0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.471901] <3>-(3)[1:swapper/0]60e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.471919] <3>-(3)[1:swapper/0]6100  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.471936] <3>-(3)[1:swapper/0]6120  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.471953] <3>-(3)[1:swapper/0]6140  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.471970] <3>-(3)[1:swapper/0]6160  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.471988] <3>-(3)[1:swapper/0]6180  00000000 00000000 00000000 00000000 00000000 00000000 759dc200 ffffffc0
+[    4.472005] <3>-(3)[1:swapper/0]61a0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.472011] <3>-(3)[1:swapper/0]
+[    4.472011] <3>X3: 0xffffffc000e50970:
+[    4.472029] <3>-(3)[1:swapper/0]0970  000001a4 00000000 00379430 ffffffc0 00379cc0 ffffffc0 00c11ec5 ffffffc0
+[    4.472047] <3>-(3)[1:swapper/0]0990  000001a4 00000000 00379880 ffffffc0 00000000 00000000 000000ff 00000000
+[    4.472065] <3>-(3)[1:swapper/0]09b0  00c6e33e ffffffc0 00a1f828 ffffffc0 00000000 00000000 00000000 00000000
+[    4.472082] <3>-(3)[1:swapper/0]09d0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.472099] <3>-(3)[1:swapper/0]09f0  00000064 00000000 00000000 00000000 00c12869 ffffffc0 0037c5dc ffffffc0
+[    4.472117] <3>-(3)[1:swapper/0]0a10  0037b764 ffffffc0 00e50740 ffffffc0 00000000 00000000 00000000 00000000
+[    4.472135] <3>-(3)[1:swapper/0]0a30  0037be24 ffffffc0 0037b934 ffffffc0 00000000 00000000 0037aff8 ffffffc0
+[    4.472153] <3>-(3)[1:swapper/0]0a50  0037b000 ffffffc0 00000000 00000000 00000000 00000000 00c12869 ffffffc0
+[    4.472159] <3>-(3)[1:swapper/0]
+[    4.472159] <3>X6: 0xffffffc074ab0540:
+[    4.472177] <3>-(3)[1:swapper/0]0540  30302d32 ff006330 74ab0540 ffffffc0 00311020 ffffffc0 74a8b700 ffffffc0
+[    4.472195] <3>-(3)[1:swapper/0]0560  ffffffed ffffffff 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.472213] <3>-(3)[1:swapper/0]0580  76697264 ff007265 74ab0580 ffffffc0 002dd2a0 ffffffc0 74a8b700 ffffffc0
+[    4.472230] <3>-(3)[1:swapper/0]05a0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.472247] <3>-(3)[1:swapper/0]05c0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.472264] <3>-(3)[1:swapper/0]05e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.472282] <3>-(3)[1:swapper/0]0600  74ab0640 ffffffc0 bfffffff ffffffff ffffffff ffffdff7 dff7ffff ffffffff
+[    4.472300] <3>-(3)[1:swapper/0]0620  fff7feff fffffffd ffffffbf fbffffff ffffffff ffffffbf e2fffebf ffffffdf
+[    4.472307] <3>-(3)[1:swapper/0]
+[    4.472307] <3>X8: 0xffffffc074ab0580:
+[    4.472325] <3>-(3)[1:swapper/0]0580  76697264 ff007265 74ab0580 ffffffc0 002dd2a0 ffffffc0 74a8b700 ffffffc0
+[    4.472342] <3>-(3)[1:swapper/0]05a0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.472359] <3>-(3)[1:swapper/0]05c0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.472377] <3>-(3)[1:swapper/0]05e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.472395] <3>-(3)[1:swapper/0]0600  74ab0640 ffffffc0 bfffffff ffffffff ffffffff ffffdff7 dff7ffff ffffffff
+[    4.472413] <3>-(3)[1:swapper/0]0620  fff7feff fffffffd ffffffbf fbffffff ffffffff ffffffbf e2fffebf ffffffdf
+[    4.472431] <3>-(3)[1:swapper/0]0640  74ab0680 ffffffc0 ffefffdf ffffffff ffffffdf ffffffff fffffffb 7fdffff3
+[    4.472449] <3>-(3)[1:swapper/0]0660  ffffffff ffbfffff ffffffff fffe7b7f fbfffbff fffdfdff ffffffff ffffffff
+[    4.472460] <3>-(3)[1:swapper/0]
+[    4.472460] <3>X19: 0xffffffc000fc5ff8:
+[    4.472478] <3>-(3)[1:swapper/0]5ff8  00000000 00000002 00000003 ffffffff 00000000 00000000 00000000 00000000
+[    4.472496] <3>-(3)[1:swapper/0]6018  00000068 00000000 00000000 00000000 74ab3000 ffffffc0 00e50a00 ffffffc0
+[    4.472513] <3>-(3)[1:swapper/0]6038  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.472530] <3>-(3)[1:swapper/0]6058  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.472548] <3>-(3)[1:swapper/0]6078  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.472565] <3>-(3)[1:swapper/0]6098  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.472582] <3>-(3)[1:swapper/0]60b8  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.472599] <3>-(3)[1:swapper/0]60d8  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.472605] <3>-(3)[1:swapper/0]
+[    4.472605] <3>X20: 0xffffffc000ee2f80:
+[    4.472623] <3>-(3)[1:swapper/0]2f80  00c11096 ffffffc0 00a1f058 ffffffc0 00c1109e ffffffc0 00c10bf8 ffffffc0
+[    4.472641] <3>-(3)[1:swapper/0]2fa0  0004059d 00000000 00c11096 ffffffc0 00a1f058 ffffffc0 00c1109e ffffffc0
+[    4.472659] <3>-(3)[1:swapper/0]2fc0  00c10e15 ffffffc0 000405f9 00000000 00c11096 ffffffc0 00a1f088 ffffffc0
+[    4.472677] <3>-(3)[1:swapper/0]2fe0  00c1109e ffffffc0 00c10e85 ffffffc0 00040428 00000000 00c11096 ffffffc0
+[    4.472695] <3>-(3)[1:swapper/0]3000  00a1f088 ffffffc0 00c1109e ffffffc0 00c10eb3 ffffffc0 0004042f 00000000
+[    4.472713] <3>-(3)[1:swapper/0]3020  00c11096 ffffffc0 00a1f088 ffffffc0 00c1109e ffffffc0 00c10eee ffffffc0
+[    4.472731] <3>-(3)[1:swapper/0]3040  0004044d 00000000 00c11096 ffffffc0 00a1f0b8 ffffffc0 00c1109e ffffffc0
+[    4.472749] <3>-(3)[1:swapper/0]3060  00c10623 ffffffc0 0004052a 00000000 00c11096 ffffffc0 00a1f0f0 ffffffc0
+[    4.472755] <3>-(3)[1:swapper/0]
+[    4.472755] <3>X21: 0xffffffc074ab0540:
+[    4.472773] <3>-(3)[1:swapper/0]0540  30302d32 ff006330 74ab0540 ffffffc0 00311020 ffffffc0 74a8b700 ffffffc0
+[    4.472790] <3>-(3)[1:swapper/0]0560  ffffffed ffffffff 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.472808] <3>-(3)[1:swapper/0]0580  76697264 ff007265 74ab0580 ffffffc0 002dd2a0 ffffffc0 74a8b700 ffffffc0
+[    4.472826] <3>-(3)[1:swapper/0]05a0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.472843] <3>-(3)[1:swapper/0]05c0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.472860] <3>-(3)[1:swapper/0]05e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.472878] <3>-(3)[1:swapper/0]0600  74ab0640 ffffffc0 bfffffff ffffffff ffffffff ffffdff7 dff7ffff ffffffff
+[    4.472896] <3>-(3)[1:swapper/0]0620  fff7feff fffffffd ffffffbf fbffffff ffffffff ffffffbf e2fffebf ffffffdf
+[    4.472901] <3>-(3)[1:swapper/0]
+[    4.472901] <3>X22: 0xffffffc000a1ef80:
+[    4.472919] <3>-(3)[1:swapper/0]ef80  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.472936] <3>-(3)[1:swapper/0]efa0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.472954] <3>-(3)[1:swapper/0]efc0  31475449 5f303130 706d6f63 695f7461 6c74636f 00000000 00e50718 ffffffc0
+[    4.472972] <3>-(3)[1:swapper/0]efe0  00e506f8 ffffffc0 00e506d8 ffffffc0 00e506b8 ffffffc0 00e50698 ffffffc0
+[    4.472990] <3>-(3)[1:swapper/0]f000  00e50678 ffffffc0 00e50658 ffffffc0 776f6873 6968635f 726f5f70 746e6569
+[    4.473008] <3>-(3)[1:swapper/0]f020  6f697461 0000006e 726f7473 68635f65 6f5f7069 6e656972 69746174 00006e6f
+[    4.473026] <3>-(3)[1:swapper/0]f040  00e50580 ffffffc0 00e505a0 ffffffc0 00e505c0 ffffffc0 31475449 5f303130
+[    4.473044] <3>-(3)[1:swapper/0]f060  5f633269 626f7270 00000065 00000000 31475449 5f303130 62616e65 6e5f656c
+[    4.473050] <3>-(3)[1:swapper/0]
+[    4.473050] <3>X23: 0xffffffc000fc5f80:
+[    4.473068] <3>-(3)[1:swapper/0]5f80  00e50478 ffffffc0 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.473085] <3>-(3)[1:swapper/0]5fa0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.473103] <3>-(3)[1:swapper/0]5fc0  74ab1600 ffffffc0 00000000 00000000 75a29000 ffffffc0 00000000 00000000
+[    4.473120] <3>-(3)[1:swapper/0]5fe0  00000000 00000000 791f5400 ffffffc0 00000000 00000000 00000000 00000002
+[    4.473137] <3>-(3)[1:swapper/0]6000  00000003 ffffffff 00000000 00000000 00000000 00000000 00000068 00000000
+[    4.473155] <3>-(3)[1:swapper/0]6020  00000000 00000000 74ab3000 ffffffc0 00e50a00 ffffffc0 00000000 00000000
+[    4.473172] <3>-(3)[1:swapper/0]6040  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.473189] <3>-(3)[1:swapper/0]6060  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.473195] <3>-(3)[1:swapper/0]
+[    4.473195] <3>X24: 0xffffffc00306baf8:
+[    4.473214] <3>-(3)[1:swapper/0]baf8  75a26c00 ffffffc0 75a26c20 ffffffc0 0037be24 ffffffc0 75a26c04 ffffffc0
+[    4.473232] <3>-(3)[1:swapper/0]bb18  00e3c000 ffffffc0 00000003 00000000 cee19f82 00000000 00fc6028 ffffffc0
+[    4.473250] <3>-(3)[1:swapper/0]bb38  00fc6030 ffffffc0 00fc6028 ffffffc0 00e509f0 ffffffc0 00fc6028 ffffffc0
+[    4.473267] <3>-(3)[1:swapper/0]bb58  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.473284] <3>-(3)[1:swapper/0]bb78  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.473301] <3>-(3)[1:swapper/0]bb98  00000000 00000000 00000000 00000000 00000000 00000000 0306bbf0 ffffffc0
+[    4.473320] <3>-(3)[1:swapper/0]bbb8  0030e2f0 ffffffc0 75a26c20 ffffffc0 00eda000 ffffffc0 00e50a68 ffffffc0
+[    4.473338] <3>-(3)[1:swapper/0]bbd8  00000000 00000000 00fb3000 ffffffc0 00eda000 ffffffc0 0306bc40 ffffffc0
+[    4.473344] <3>-(3)[1:swapper/0]
+[    4.473344] <3>X25: 0xffffffc00306bad8:
+[    4.473362] <3>-(3)[1:swapper/0]bad8  00fc6030 ffffffc0 0306bbb0 ffffffc0 006fb9a8 ffffffc0 00a1fe78 ffffffc0
+[    4.473380] <3>-(3)[1:swapper/0]baf8  75a26c00 ffffffc0 75a26c20 ffffffc0 0037be24 ffffffc0 75a26c04 ffffffc0
+[    4.473398] <3>-(3)[1:swapper/0]bb18  00e3c000 ffffffc0 00000003 00000000 cee19f82 00000000 00fc6028 ffffffc0
+[    4.473416] <3>-(3)[1:swapper/0]bb38  00fc6030 ffffffc0 00fc6028 ffffffc0 00e509f0 ffffffc0 00fc6028 ffffffc0
+[    4.473433] <3>-(3)[1:swapper/0]bb58  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.473450] <3>-(3)[1:swapper/0]bb78  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.473468] <3>-(3)[1:swapper/0]bb98  00000000 00000000 00000000 00000000 00000000 00000000 0306bbf0 ffffffc0
+[    4.473486] <3>-(3)[1:swapper/0]bbb8  0030e2f0 ffffffc0 75a26c20 ffffffc0 00eda000 ffffffc0 00e50a68 ffffffc0
+[    4.473492] <3>-(3)[1:swapper/0]
+[    4.473492] <3>X26: 0xffffffc000e4ff80:
+[    4.473509] <3>-(3)[1:swapper/0]ff80  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.473526] <3>-(3)[1:swapper/0]ffa0  00000000 00000000 00000000 00000000 00c0de2e ffffffc0 00000124 00000000
+[    4.473544] <3>-(3)[1:swapper/0]ffc0  003726ac ffffffc0 00000000 00000000 00bcf302 ffffffc0 000001a4 00000000
+[    4.473562] <3>-(3)[1:swapper/0]ffe0  00372654 ffffffc0 003725c8 ffffffc0 00c0de3e ffffffc0 000001a4 00000000
+[    4.473580] <3>-(3)[1:swapper/0]0000  003720cc ffffffc0 003720d4 ffffffc0 00d1e180 ffffffc0 000001a4 00000000
+[    4.473598] <3>-(3)[1:swapper/0]0020  003720bc ffffffc0 003720c4 ffffffc0 00cf72e4 ffffffc0 000001a4 00000000
+[    4.473616] <3>-(3)[1:swapper/0]0040  003720dc ffffffc0 003720b4 ffffffc0 00c0de43 ffffffc0 00000124 00000000
+[    4.473634] <3>-(3)[1:swapper/0]0060  003720dc ffffffc0 00000000 00000000 00000001 00000000 00e50078 ffffffc0
+[    4.473640] <3>-(3)[1:swapper/0]
+[    4.473640] <3>X27: 0xffffffc075a26b80:
+[    4.473657] <3>-(3)[1:swapper/0]6b80  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.473674] <3>-(3)[1:swapper/0]6ba0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.473692] <3>-(3)[1:swapper/0]6bc0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.473709] <3>-(3)[1:swapper/0]6be0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.473727] <3>-(3)[1:swapper/0]6c00  000c0000 6e65736d 00726f73 00000000 00000000 00000000 75a26818 ffffffc0
+[    4.473745] <3>-(3)[1:swapper/0]6c20  75a26860 ffffffc0 75a21600 ffffffc0 75a25600 ffffffc0 75a29038 ffffffc0
+[    4.473763] <3>-(3)[1:swapper/0]6c40  75a26878 ffffffc0 75a26870 ffffffc0 7d92f480 ffffffc0 00e3c908 ffffffc0
+[    4.473781] <3>-(3)[1:swapper/0]6c60  75a281e0 ffffffc0 00000003 00000007 00000000 00000000 00e8f6b0 ffffffc0
+[    4.473787] <3>-(3)[1:swapper/0]
+[    4.473787] <3>X28: 0xffffffc000fc60c0:
+[    4.473804] <3>-(3)[1:swapper/0]60c0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.473821] <3>-(3)[1:swapper/0]60e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.473838] <3>-(3)[1:swapper/0]6100  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.473856] <3>-(3)[1:swapper/0]6120  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.473873] <3>-(3)[1:swapper/0]6140  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.473890] <3>-(3)[1:swapper/0]6160  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.473908] <3>-(3)[1:swapper/0]6180  00000000 00000000 00000000 00000000 00000000 00000000 759dc200 ffffffc0
+[    4.473925] <3>-(3)[1:swapper/0]61a0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.473931] <3>-(3)[1:swapper/0]
+[    4.473931] <3>X29: 0xffffffc00306ba60:
+[    4.473949] <3>-(3)[1:swapper/0]ba60  00ee3000 ffffffc0 74ab05c0 ffffffc0 00a1f000 ffffffc0 00fc6000 ffffffc0
+[    4.473968] <3>-(3)[1:swapper/0]ba80  0306bb78 ffffffc0 0306bb58 ffffffc0 00e50000 ffffffc0 75a26c00 ffffffc0
+[    4.473986] <3>-(3)[1:swapper/0]baa0  00fc6140 ffffffc0 0306bae0 ffffffc0 0037bea0 ffffffc0 0306bae0 ffffffc0
+[    4.474004] <3>-(3)[1:swapper/0]bac0  0037bed0 ffffffc0 60000145 00000000 75a26c00 ffffffc0 00fc6030 ffffffc0
+[    4.474022] <3>-(3)[1:swapper/0]bae0  0306bbb0 ffffffc0 006fb9a8 ffffffc0 00a1fe78 ffffffc0 75a26c00 ffffffc0
+[    4.474040] <3>-(3)[1:swapper/0]bb00  75a26c20 ffffffc0 0037be24 ffffffc0 75a26c04 ffffffc0 00e3c000 ffffffc0
+[    4.474058] <3>-(3)[1:swapper/0]bb20  00000003 00000000 cee19f82 00000000 00fc6028 ffffffc0 00fc6030 ffffffc0
+[    4.474076] <3>-(3)[1:swapper/0]bb40  00fc6028 ffffffc0 00e509f0 ffffffc0 00fc6028 ffffffc0 00000000 00000000
+[    4.474080] <3>-(3)[1:swapper/0]
+[    4.474089] <3>-(3)[1:swapper/0]CPU: 3 PID: 1 Comm: swapper/0 Tainted: G        W      3.18.35+ #1
+[    4.474094] <3>-(3)[1:swapper/0]Hardware name: MT6737 (DT)
+[    4.474099] <3>-(3)[1:swapper/0]Call trace:
+[    4.474113] <3>-(3)[1:swapper/0][<ffffffc000088dd0>] dump_backtrace+0x0/0x140
+[    4.474123] <3>-(3)[1:swapper/0][<ffffffc000088f24>] show_stack+0x14/0x1c
+[    4.474134] <3>-(3)[1:swapper/0][<ffffffc000997e98>] dump_stack+0x80/0xa4
+[    4.474145] <3>-(3)[1:swapper/0][<ffffffc000652cb0>] ipanic_die+0x64/0xe8
+[    4.474156] <3>-(3)[1:swapper/0][<ffffffc0000b7990>] notifier_call_chain+0x158/0x26c
+[    4.474165] <3>-(3)[1:swapper/0][<ffffffc0000b7b84>] __atomic_notifier_call_chain+0x3c/0x50
+[    4.474174] <3>-(3)[1:swapper/0][<ffffffc0000b7bac>] atomic_notifier_call_chain+0x14/0x1c
+[    4.474183] <3>-(3)[1:swapper/0][<ffffffc0000b7fc4>] notify_die+0x34/0x3c
+[    4.474192] <3>-(3)[1:swapper/0][<ffffffc000088fc4>] die+0x98/0x1a0
+[    4.474203] <3>-(3)[1:swapper/0][<ffffffc000996eac>] __do_kernel_fault.part.6+0x74/0x84
+[    4.474214] <3>-(3)[1:swapper/0][<ffffffc000095afc>] do_page_fault+0x2e8/0x334
+[    4.474224] <3>-(3)[1:swapper/0][<ffffffc000095b94>] do_translation_fault+0x4c/0xe0
+[    4.474232] <3>-(3)[1:swapper/0][<ffffffc00008128c>] do_mem_abort+0x3c/0xe4
+[    4.474240] <3>-(3)[1:swapper/0]Exception stack(0xffffffc00306b920 to 0xffffffc00306ba40)
+[    4.474252] <3>-(3)[1:swapper/0]b920: 00fc6078 ffffffc0 03068000 ffffffc0 0306bae0 ffffffc0 0037bed0 ffffffc0
+[    4.474264] <3>-(3)[1:swapper/0]b940: 0306bb58 ffffffc0 cee19f82 00000000 75a26c00 ffffffc0 00fc6030 ffffffc0
+[    4.474275] <3>-(3)[1:swapper/0]b960: 00000000 ffffffc0 000c000c 00000000 00000000 00000000 00000000 00000000
+[    4.474286] <3>-(3)[1:swapper/0]b980: 0306ba30 ffffffc0 0306ba30 ffffffc0 0306b9f0 ffffffc0 ffffffc8 00000000
+[    4.474298] <3>-(3)[1:swapper/0]b9a0: 0306ba30 ffffffc0 002d5c64 ffffffc0 0306ba30 ffffffc0 0306ba30 ffffffc0
+[    4.474309] <3>-(3)[1:swapper/0]b9c0: 00000000 00000000 00c12b33 ffffffc0 00fc6140 ffffffc0 00e509f0 ffffffc0
+[    4.474320] <3>-(3)[1:swapper/0]b9e0: 00000000 00000000 00000140 00000000 74ab05c0 ffffffc0 00000000 00000000
+[    4.474332] <3>-(3)[1:swapper/0]ba00: 74ab0600 ffffffc0 7f7f7f7f 7f7f7f7f fefeff2f fefefefe 7f7f7f7f 7f7f7f7f
+[    4.474343] <3>-(3)[1:swapper/0]ba20: 01010101 01010101 00000008 00000000 fffffffe 0fffffff 00000000 00000000
+[    4.474351] <3>-(3)[1:swapper/0][<ffffffc000083c68>] el1_da+0x18/0x80
+[    4.474362] <3>-(3)[1:swapper/0][<ffffffc0006fb9a8>] i2c_device_probe+0xf0/0x124
+[    4.474372] <3>-(3)[1:swapper/0][<ffffffc00030e2f0>] driver_probe_device+0x168/0x3b0
+[    4.474380] <3>-(3)[1:swapper/0][<ffffffc00030e5e8>] __driver_attach+0x64/0x90
+[    4.474388] <3>-(3)[1:swapper/0][<ffffffc00030c900>] bus_for_each_dev+0x74/0x90
+[    4.474397] <3>-(3)[1:swapper/0][<ffffffc00030e6bc>] driver_attach+0x20/0x28
+[    4.474405] <3>-(3)[1:swapper/0][<ffffffc00030d1f4>] bus_add_driver+0x11c/0x1f4
+[    4.474414] <3>-(3)[1:swapper/0][<ffffffc00030f050>] driver_register+0xc0/0x10c
+[    4.474423] <3>-(3)[1:swapper/0][<ffffffc0006fc8f4>] i2c_register_driver+0x4c/0xd0
+[    4.474432] <3>-(3)[1:swapper/0][<ffffffc00037c5f8>] akm09911_local_init+0x1c/0x5c
+[    4.474442] <3>-(3)[1:swapper/0][<ffffffc000da6228>] mag_init+0x254/0x58c
+[    4.474453] <3>-(3)[1:swapper/0][<ffffffc000d7ca6c>] do_one_initcall+0xe4/0x1b4
+[    4.474463] <3>-(3)[1:swapper/0][<ffffffc000d7cc84>] kernel_init_freeable+0x148/0x1e4
+[    4.474472] <3>-(3)[1:swapper/0][<ffffffc0009934e8>] kernel_init+0x14/0xe4
+[    4.474563] <3>-(3)[1:swapper/0]mrdump: cpu[3] tsk:ffffffc003052000 ti:ffffffc003068000
+[    4.667319] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.667568] <3>-(3)[1:swapper/0][name:mrdump_mini&]mirdump: write fail
+[    4.667600] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.667847] <3>-(3)[1:swapper/0][name:mrdump_mini&]mirdump: write fail
+[    4.667879] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.668131] <3>-(3)[1:swapper/0][name:mrdump_mini&]mirdump: write fail
+[    4.668164] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.668422] <3>-(3)[1:swapper/0][name:mrdump_mini&]mirdump: write fail
+[    4.668456] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.668715] <3>-(3)[1:swapper/0][name:mrdump_mini&]mirdump: write fail
+[    4.668747] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.668999] <3>-(3)[1:swapper/0][name:mrdump_mini&]mirdump: write fail
+[    4.669032] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.669283] <3>-(3)[1:swapper/0][name:mrdump_mini&]mirdump: write fail
+[    4.669315] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.669559] <3>-(3)[1:swapper/0][name:mrdump_mini&]mirdump: write fail
+[    4.669591] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.669840] <3>-(3)[1:swapper/0][name:mrdump_mini&]mirdump: write fail
+[    4.669872] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.670125] <3>-(3)[1:swapper/0][name:mrdump_mini&]mirdump: write fail
+[    4.670157] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.670415] <3>-(3)[1:swapper/0][name:mrdump_mini&]mirdump: write fail
+[    4.670449] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.670707] <3>-(3)[1:swapper/0][name:mrdump_mini&]mirdump: write fail
+[    4.670741] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.670994] <3>-(3)[1:swapper/0][name:mrdump_mini&]mirdump: write fail
+[    4.671027] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.671275] <3>-(3)[1:swapper/0][name:mrdump_mini&]mirdump: write fail
+[    4.671308] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.671554] <3>-(3)[1:swapper/0][name:mrdump_mini&]mirdump: write fail
+[    4.671585] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.671834] <3>-(3)[1:swapper/0][name:mrdump_mini&]mirdump: write fail
+[    4.671866] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.672121] <3>-(3)[1:swapper/0][name:mrdump_mini&]mirdump: write fail
+[    4.672153] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.672409] <3>-(3)[1:swapper/0][name:mrdump_mini&]mirdump: write fail
+[    4.672442] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.672697] <3>-(3)[1:swapper/0][name:mrdump_mini&]mirdump: write fail
+[    4.672730] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.672982] <3>-(3)[1:swapper/0][name:mrdump_mini&]mirdump: write fail
+[    4.673014] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.673262] <3>-(3)[1:swapper/0][name:mrdump_mini&]mirdump: write fail
+[    4.673293] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.673540] <3>-(3)[1:swapper/0][name:mrdump_mini&]mirdump: write fail
+[    4.673572] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.673822] <3>-(3)[1:swapper/0][name:mrdump_mini&]mirdump: write fail
+[    4.673855] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.673927] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.673981] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.674046] <3>-(3)[1:swapper/0]ipanic_header_to_sd: failed[8--1]
+[    4.676694] <3>-(3)[1:swapper/0][name:ipanic&]kernel log region: [15838:9f7,15804:f78]
+[    4.676727] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.676792] <3>-(3)[1:swapper/0]ipanic_data_to_sd: dump SYS_KERNEL_LOG failed[-1]
+[    4.676987] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    4.677049] <3>-(3)[1:swapper/0]ipanic_data_to_sd: dump PROC_CUR_TSK failed[-1]
+[    4.677158] <3>-(3)[1:swapper/0]CPU: 3 PID: 1 Comm: swapper/0 Tainted: G        W      3.18.35+ #1
+[    4.677213] <3>-(3)[1:swapper/0]Hardware name: MT6737 (DT)
+[    4.677292] <3>-(3)[1:swapper/0]task: ffffffc003052000 ti: ffffffc003068000 task.ti: ffffffc003068000
+[    4.677389] <3>-(3)[1:swapper/0]PC is at akm09911_i2c_probe+0xac/0x3a8
+[    4.677485] <3>-(3)[1:swapper/0]LR is at akm09911_i2c_probe+0x7c/0x3a8
+[    4.677560] <3>-(3)[1:swapper/0]pc : [<ffffffc00037bed0>] lr : [<ffffffc00037bea0>] pstate: 60000145
+[    4.677611] <3>-(3)[1:swapper/0]sp : ffffffc00306bae0
+[    4.677715] <3>-(3)[1:swapper/0]x29: ffffffc00306bae0 x28: ffffffc000fc6140 
+[    4.677819] <3>-(3)[1:swapper/0]x27: ffffffc075a26c00 x26: ffffffc000e50000 
+[    4.677925] <3>-(3)[1:swapper/0]x25: ffffffc00306bb58 x24: ffffffc00306bb78 
+[    4.678032] <3>-(3)[1:swapper/0]x23: ffffffc000fc6000 x22: ffffffc000a1f000 
+[    4.678140] <3>-(3)[1:swapper/0]x21: ffffffc074ab05c0 x20: ffffffc000ee3000 
+[    4.678247] <3>-(3)[1:swapper/0]x19: ffffffc000fc6078 x18: 0000000000000fd8 
+[    4.678350] <3>-(3)[1:swapper/0]x17: 0000000000000000 x16: 0000000000000000 
+[    4.678455] <3>-(3)[1:swapper/0]x15: 0000000000000000 x14: 0ffffffffffffffe 
+[    4.678559] <3>-(3)[1:swapper/0]x13: 0000000000000008 x12: 0101010101010101 
+[    4.678666] <3>-(3)[1:swapper/0]x11: 7f7f7f7f7f7f7f7f x10: fefefefefefeff2f 
+[    4.678771] <3>-(3)[1:swapper/0]x9 : 7f7f7f7f7f7f7f7f x8 : ffffffc074ab0600 
+[    4.678874] <3>-(3)[1:swapper/0]x7 : 0000000000000000 x6 : ffffffc074ab05c0 
+[    4.678975] <3>-(3)[1:swapper/0]x5 : 0000000000000140 x4 : 0000000000000000 
+[    4.679078] <3>-(3)[1:swapper/0]x3 : ffffffc000e509f0 x2 : ffffffc000fc6140 
+[    4.679178] <3>-(3)[1:swapper/0]x1 : ffffffc000c12b33 x0 : 0000000000000000 
+[    4.679233] <3>-(3)[1:swapper/0]
+[    4.679233] <3>PC: 0xffffffc00037be50:
+[    4.679454] <3>-(3)[1:swapper/0]be50  910263b8 9101e3b9 a9025bf5 79404401 a9007f1f a9017f1f a9027f1f a9007f3f
+[    4.679679] <3>-(3)[1:swapper/0]be70  a9017f3f 36100081 f00044a1 912c1021 97fd674a f00060c0 52901a01 d2800402
+[    4.679907] <3>-(3)[1:swapper/0]be90  f0006257 90003536 f9426400 97f808f5 aa0003f5 b4000ee0 b00056ba 9101e2f3
+[    4.680137] <3>-(3)[1:swapper/0]beb0  9127c343 9103227c f00044a1 aa1c03e2 912ccc21 f90037a3 f9400460 f90006a0
+[    4.680370] <3>-(3)[1:swapper/0]bed0  b9400400 b90012a0 91028260 b90016bf 97f57796 f00044a1 aa1303e0 912d1421
+[    4.680600] <3>-(3)[1:swapper/0]bef0  aa1c03e2 97f57791 f94037a3 f00044a1 912d6021 aa1c03e2 91062060 97f55d99
+[    4.680826] <3>-(3)[1:swapper/0]bf10  f9004e7b 91242293 f90002bb 9112c260 f9006375 79404401 36100081 f00044a1
+[    4.681049] <3>-(3)[1:swapper/0]bf30  912d8421 97fd671d 910343a0 52800021 381a0c1f 97ffff79 aa0003fb 2a0003f3
+[    4.681104] <3>-(3)[1:swapper/0]
+[    4.681104] <3>LR: 0xffffffc00037be20:
+[    4.681323] <3>-(3)[1:swapper/0]be20  d65f03c0 a9b37bfd 910003fd a90153f3 90005b54 91242293 f90067bf a90573fb
+[    4.681547] <3>-(3)[1:swapper/0]be40  aa0003fb 91122260 a90363f7 a9046bf9 910263b8 9101e3b9 a9025bf5 79404401
+[    4.681775] <3>-(3)[1:swapper/0]be60  a9007f1f a9017f1f a9027f1f a9007f3f a9017f3f 36100081 f00044a1 912c1021
+[    4.682006] <3>-(3)[1:swapper/0]be80  97fd674a f00060c0 52901a01 d2800402 f0006257 90003536 f9426400 97f808f5
+[    4.682240] <3>-(3)[1:swapper/0]bea0  aa0003f5 b4000ee0 b00056ba 9101e2f3 9127c343 9103227c f00044a1 aa1c03e2
+[    4.682475] <3>-(3)[1:swapper/0]bec0  912ccc21 f90037a3 f9400460 f90006a0 b9400400 b90012a0 91028260 b90016bf
+[    4.682703] <3>-(3)[1:swapper/0]bee0  97f57796 f00044a1 aa1303e0 912d1421 aa1c03e2 97f57791 f94037a3 f00044a1
+[    4.682929] <3>-(3)[1:swapper/0]bf00  912d6021 aa1c03e2 91062060 97f55d99 f9004e7b 91242293 f90002bb 9112c260
+[    4.682984] <3>-(3)[1:swapper/0]
+[    4.682984] <3>SP: 0xffffffc00306ba60:
+[    4.683203] <3>-(3)[1:swapper/0]ba60  00ee3000 ffffffc0 74ab05c0 ffffffc0 00a1f000 ffffffc0 00fc6000 ffffffc0
+[    4.683425] <3>-(3)[1:swapper/0]ba80  0306bb78 ffffffc0 0306bb58 ffffffc0 00e50000 ffffffc0 75a26c00 ffffffc0
+[    4.683650] <3>-(3)[1:swapper/0]baa0  00fc6140 ffffffc0 0306bae0 ffffffc0 0037bea0 ffffffc0 0306bae0 ffffffc0
+[    4.683878] <3>-(3)[1:swapper/0]bac0  0037bed0 ffffffc0 60000145 00000000 75a26c00 ffffffc0 00fc6030 ffffffc0
+[    4.684111] <3>-(3)[1:swapper/0]bae0  0306bbb0 ffffffc0 006fb9a8 ffffffc0 00a1fe78 ffffffc0 75a26c00 ffffffc0
+[    4.684344] <3>-(3)[1:swapper/0]bb00  75a26c20 ffffffc0 0037be24 ffffffc0 75a26c04 ffffffc0 00e3c000 ffffffc0
+[    4.684572] <3>-(3)[1:swapper/0]bb20  00000003 00000000 cee19f82 00000000 00fc6028 ffffffc0 00fc6030 ffffffc0
+[    4.684796] <3>-(3)[1:swapper/0]bb40  00fc6028 ffffffc0 00e509f0 ffffffc0 00fc6028 ffffffc0 00000000 00000000
+[    4.684864] <3>-(3)[1:swapper/0]
+[    4.684864] <3>X1: 0xffffffc000c12ab3:
+[    4.685086] <3>-(3)[1:swapper/0]2ab0  5d263131 4d4b415b 31393930 52205d31 61656c65 64206573 63697665 6f6e2065
+[    4.685307] <3>-(3)[1:swapper/0]2ad0  613a6564 39306d6b 0a313139 3c330100 4e47414d 43495445 7325203e 20642520
+[    4.685530] <3>-(3)[1:swapper/0]2af0  7325203a 74657220 6f207972 20726576 000a6425 6d616e5b 6b613a65 3939306d
+[    4.685757] <3>-(3)[1:swapper/0]2b10  5d263131 4d4b415b 31393930 61205d31 39306d6b 5f313139 5f633269 626f7270
+[    4.685989] <3>-(3)[1:swapper/0]2b30  26000a65 736e6573 61645f65 6d5f6174 78657475 65732600 726f736e 7461645f
+[    4.686222] <3>-(3)[1:swapper/0]2b50  756d5f61 00786574 65706f26 71775f6e 616e5b00 613a656d 39306d6b 26313139
+[    4.686453] <3>-(3)[1:swapper/0]2b70  4b415b5d 3939304d 205d3131 4d4b4120 65686320 64206b63 63697665 64692065
+[    4.686681] <3>-(3)[1:swapper/0]2b90  616e5b00 613a656d 39306d6b 26313139 4b415b5d 3939304d 205d3131 4d4b4120
+[    4.686904] <3>-(3)[1:swapper/0]2bb0  65686320 64206b63 63697665 64692065 25203d20 6e5b0078 3a656d61 306d6b61
+[    4.686965] <3>-(3)[1:swapper/0]
+[    4.686965] <3>X2: 0xffffffc000fc60c0:
+[    4.687178] <3>-(3)[1:swapper/0]60c0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.687393] <3>-(3)[1:swapper/0]60e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.687608] <3>-(3)[1:swapper/0]6100  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.687830] <3>-(3)[1:swapper/0]6120  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.688056] <3>-(3)[1:swapper/0]6140  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.688278] <3>-(3)[1:swapper/0]6160  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.688501] <3>-(3)[1:swapper/0]6180  00000000 00000000 00000000 00000000 00000000 00000000 759dc200 ffffffc0
+[    4.688718] <3>-(3)[1:swapper/0]61a0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.688780] <3>-(3)[1:swapper/0]
+[    4.688780] <3>X3: 0xffffffc000e50970:
+[    4.688999] <3>-(3)[1:swapper/0]0970  000001a4 00000000 00379430 ffffffc0 00379cc0 ffffffc0 00c11ec5 ffffffc0
+[    4.689214] <3>-(3)[1:swapper/0]0990  000001a4 00000000 00379880 ffffffc0 00000000 00000000 000000ff 00000000
+[    4.689430] <3>-(3)[1:swapper/0]09b0  00c6e33e ffffffc0 00a1f828 ffffffc0 00000000 00000000 00000000 00000000
+[    4.689647] <3>-(3)[1:swapper/0]09d0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.689871] <3>-(3)[1:swapper/0]09f0  00000064 00000000 00000000 00000000 00c12869 ffffffc0 0037c5dc ffffffc0
+[    4.690100] <3>-(3)[1:swapper/0]0a10  0037b764 ffffffc0 00e50740 ffffffc0 00000000 00000000 00000000 00000000
+[    4.690328] <3>-(3)[1:swapper/0]0a30  0037be24 ffffffc0 0037b934 ffffffc0 00000000 00000000 0037aff8 ffffffc0
+[    4.690550] <3>-(3)[1:swapper/0]0a50  0037b000 ffffffc0 00000000 00000000 00000000 00000000 00c12869 ffffffc0
+[    4.690627] <3>-(3)[1:swapper/0]
+[    4.690627] <3>X6: 0xffffffc074ab0540:
+[    4.690849] <3>-(3)[1:swapper/0]0540  30302d32 ff006330 74ab0540 ffffffc0 00311020 ffffffc0 74a8b700 ffffffc0
+[    4.691063] <3>-(3)[1:swapper/0]0560  ffffffed ffffffff 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.691284] <3>-(3)[1:swapper/0]0580  76697264 ff007265 74ab0580 ffffffc0 002dd2a0 ffffffc0 74a8b700 ffffffc0
+[    4.691500] <3>-(3)[1:swapper/0]05a0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.691720] <3>-(3)[1:swapper/0]05c0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.691945] <3>-(3)[1:swapper/0]05e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.692178] <3>-(3)[1:swapper/0]0600  74ab0640 ffffffc0 bfffffff ffffffff ffffffff ffffdff7 dff7ffff ffffffff
+[    4.692406] <3>-(3)[1:swapper/0]0620  fff7feff fffffffd ffffffbf fbffffff ffffffff ffffffbf e2fffebf ffffffdf
+[    4.692478] <3>-(3)[1:swapper/0]
+[    4.692478] <3>X8: 0xffffffc074ab0580:
+[    4.692702] <3>-(3)[1:swapper/0]0580  76697264 ff007265 74ab0580 ffffffc0 002dd2a0 ffffffc0 74a8b700 ffffffc0
+[    4.692914] <3>-(3)[1:swapper/0]05a0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.693127] <3>-(3)[1:swapper/0]05c0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.693342] <3>-(3)[1:swapper/0]05e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.693569] <3>-(3)[1:swapper/0]0600  74ab0640 ffffffc0 bfffffff ffffffff ffffffff ffffdff7 dff7ffff ffffffff
+[    4.693799] <3>-(3)[1:swapper/0]0620  fff7feff fffffffd ffffffbf fbffffff ffffffff ffffffbf e2fffebf ffffffdf
+[    4.694032] <3>-(3)[1:swapper/0]0640  74ab0680 ffffffc0 ffefffdf ffffffff ffffffdf ffffffff fffffffb 7fdffff3
+[    4.694263] <3>-(3)[1:swapper/0]0660  ffffffff ffbfffff ffffffff fffe7b7f fbfffbff fffdfdff ffffffff ffffffff
+[    4.694399] <3>-(3)[1:swapper/0]
+[    4.694399] <3>X19: 0xffffffc000fc5ff8:
+[    4.694616] <3>-(3)[1:swapper/0]5ff8  00000000 00000002 00000003 ffffffff 00000000 00000000 00000000 00000000
+[    4.694835] <3>-(3)[1:swapper/0]6018  00000068 00000000 00000000 00000000 74ab3000 ffffffc0 00e50a00 ffffffc0
+[    4.695047] <3>-(3)[1:swapper/0]6038  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.695261] <3>-(3)[1:swapper/0]6058  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.695479] <3>-(3)[1:swapper/0]6078  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.695700] <3>-(3)[1:swapper/0]6098  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.695923] <3>-(3)[1:swapper/0]60b8  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.696146] <3>-(3)[1:swapper/0]60d8  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.696210] <3>-(3)[1:swapper/0]
+[    4.696210] <3>X20: 0xffffffc000ee2f80:
+[    4.696436] <3>-(3)[1:swapper/0]2f80  00c11096 ffffffc0 00a1f058 ffffffc0 00c1109e ffffffc0 00c10bf8 ffffffc0
+[    4.696656] <3>-(3)[1:swapper/0]2fa0  0004059d 00000000 00c11096 ffffffc0 00a1f058 ffffffc0 00c1109e ffffffc0
+[    4.696875] <3>-(3)[1:swapper/0]2fc0  00c10e15 ffffffc0 000405f9 00000000 00c11096 ffffffc0 00a1f088 ffffffc0
+[    4.697094] <3>-(3)[1:swapper/0]2fe0  00c1109e ffffffc0 00c10e85 ffffffc0 00040428 00000000 00c11096 ffffffc0
+[    4.697316] <3>-(3)[1:swapper/0]3000  00a1f088 ffffffc0 00c1109e ffffffc0 00c10eb3 ffffffc0 0004042f 00000000
+[    4.697542] <3>-(3)[1:swapper/0]3020  00c11096 ffffffc0 00a1f088 ffffffc0 00c1109e ffffffc0 00c10eee ffffffc0
+[    4.697772] <3>-(3)[1:swapper/0]3040  0004044d 00000000 00c11096 ffffffc0 00a1f0b8 ffffffc0 00c1109e ffffffc0
+[    4.698003] <3>-(3)[1:swapper/0]3060  00c10623 ffffffc0 0004052a 00000000 00c11096 ffffffc0 00a1f0f0 ffffffc0
+[    4.698069] <3>-(3)[1:swapper/0]
+[    4.698069] <3>X21: 0xffffffc074ab0540:
+[    4.698298] <3>-(3)[1:swapper/0]0540  30302d32 ff006330 74ab0540 ffffffc0 00311020 ffffffc0 74a8b700 ffffffc0
+[    4.698516] <3>-(3)[1:swapper/0]0560  ffffffed ffffffff 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.698738] <3>-(3)[1:swapper/0]0580  76697264 ff007265 74ab0580 ffffffc0 002dd2a0 ffffffc0 74a8b700 ffffffc0
+[    4.698950] <3>-(3)[1:swapper/0]05a0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.699163] <3>-(3)[1:swapper/0]05c0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.699381] <3>-(3)[1:swapper/0]05e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.699612] <3>-(3)[1:swapper/0]0600  74ab0640 ffffffc0 bfffffff ffffffff ffffffff ffffdff7 dff7ffff ffffffff
+[    4.699846] <3>-(3)[1:swapper/0]0620  fff7feff fffffffd ffffffbf fbffffff ffffffff ffffffbf e2fffebf ffffffdf
+[    4.699911] <3>-(3)[1:swapper/0]
+[    4.699911] <3>X22: 0xffffffc000a1ef80:
+[    4.700132] <3>-(3)[1:swapper/0]ef80  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.700352] <3>-(3)[1:swapper/0]efa0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.700575] <3>-(3)[1:swapper/0]efc0  31475449 5f303130 706d6f63 695f7461 6c74636f 00000000 00e50718 ffffffc0
+[    4.700795] <3>-(3)[1:swapper/0]efe0  00e506f8 ffffffc0 00e506d8 ffffffc0 00e506b8 ffffffc0 00e50698 ffffffc0
+[    4.701018] <3>-(3)[1:swapper/0]f000  00e50678 ffffffc0 00e50658 ffffffc0 776f6873 6968635f 726f5f70 746e6569
+[    4.701243] <3>-(3)[1:swapper/0]f020  6f697461 0000006e 726f7473 68635f65 6f5f7069 6e656972 69746174 00006e6f
+[    4.701473] <3>-(3)[1:swapper/0]f040  00e50580 ffffffc0 00e505a0 ffffffc0 00e505c0 ffffffc0 31475449 5f303130
+[    4.701704] <3>-(3)[1:swapper/0]f060  5f633269 626f7270 00000065 00000000 31475449 5f303130 62616e65 6e5f656c
+[    4.701771] <3>-(3)[1:swapper/0]
+[    4.701771] <3>X23: 0xffffffc000fc5f80:
+[    4.701997] <3>-(3)[1:swapper/0]5f80  00e50478 ffffffc0 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.702218] <3>-(3)[1:swapper/0]5fa0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.702440] <3>-(3)[1:swapper/0]5fc0  74ab1600 ffffffc0 00000000 00000000 75a29000 ffffffc0 00000000 00000000
+[    4.702655] <3>-(3)[1:swapper/0]5fe0  00000000 00000000 791f5400 ffffffc0 00000000 00000000 00000000 00000002
+[    4.702869] <3>-(3)[1:swapper/0]6000  00000003 ffffffff 00000000 00000000 00000000 00000000 00000068 00000000
+[    4.703088] <3>-(3)[1:swapper/0]6020  00000000 00000000 74ab3000 ffffffc0 00e50a00 ffffffc0 00000000 00000000
+[    4.703306] <3>-(3)[1:swapper/0]6040  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.703527] <3>-(3)[1:swapper/0]6060  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.703594] <3>-(3)[1:swapper/0]
+[    4.703594] <3>X24: 0xffffffc00306baf8:
+[    4.703828] <3>-(3)[1:swapper/0]baf8  75a26c00 ffffffc0 75a26c20 ffffffc0 0037be24 ffffffc0 75a26c04 ffffffc0
+[    4.704054] <3>-(3)[1:swapper/0]bb18  00e3c000 ffffffc0 00000003 00000000 cee19f82 00000000 00fc6028 ffffffc0
+[    4.704281] <3>-(3)[1:swapper/0]bb38  00fc6030 ffffffc0 00fc6028 ffffffc0 00e509f0 ffffffc0 00fc6028 ffffffc0
+[    4.704496] <3>-(3)[1:swapper/0]bb58  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.704711] <3>-(3)[1:swapper/0]bb78  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.704926] <3>-(3)[1:swapper/0]bb98  00000000 00000000 00000000 00000000 00000000 00000000 0306bbf0 ffffffc0
+[    4.705152] <3>-(3)[1:swapper/0]bbb8  0030e2f0 ffffffc0 75a26c20 ffffffc0 00eda000 ffffffc0 00e50a68 ffffffc0
+[    4.705379] <3>-(3)[1:swapper/0]bbd8  00000000 00000000 00fb3000 ffffffc0 00eda000 ffffffc0 0306bc40 ffffffc0
+[    4.705444] <3>-(3)[1:swapper/0]
+[    4.705444] <3>X25: 0xffffffc00306bad8:
+[    4.705676] <3>-(3)[1:swapper/0]bad8  00fc6030 ffffffc0 0306bbb0 ffffffc0 006fb9a8 ffffffc0 00a1fe78 ffffffc0
+[    4.705911] <3>-(3)[1:swapper/0]baf8  75a26c00 ffffffc0 75a26c20 ffffffc0 0037be24 ffffffc0 75a26c04 ffffffc0
+[    4.706137] <3>-(3)[1:swapper/0]bb18  00e3c000 ffffffc0 00000003 00000000 cee19f82 00000000 00fc6028 ffffffc0
+[    4.706358] <3>-(3)[1:swapper/0]bb38  00fc6030 ffffffc0 00fc6028 ffffffc0 00e509f0 ffffffc0 00fc6028 ffffffc0
+[    4.706570] <3>-(3)[1:swapper/0]bb58  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.706779] <3>-(3)[1:swapper/0]bb78  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.706994] <3>-(3)[1:swapper/0]bb98  00000000 00000000 00000000 00000000 00000000 00000000 0306bbf0 ffffffc0
+[    4.707218] <3>-(3)[1:swapper/0]bbb8  0030e2f0 ffffffc0 75a26c20 ffffffc0 00eda000 ffffffc0 00e50a68 ffffffc0
+[    4.707283] <3>-(3)[1:swapper/0]
+[    4.707283] <3>X26: 0xffffffc000e4ff80:
+[    4.707501] <3>-(3)[1:swapper/0]ff80  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.707727] <3>-(3)[1:swapper/0]ffa0  00000000 00000000 00000000 00000000 00c0de2e ffffffc0 00000124 00000000
+[    4.707953] <3>-(3)[1:swapper/0]ffc0  003726ac ffffffc0 00000000 00000000 00bcf302 ffffffc0 000001a4 00000000
+[    4.708176] <3>-(3)[1:swapper/0]ffe0  00372654 ffffffc0 003725c8 ffffffc0 00c0de3e ffffffc0 000001a4 00000000
+[    4.708397] <3>-(3)[1:swapper/0]0000  003720cc ffffffc0 003720d4 ffffffc0 00d1e180 ffffffc0 000001a4 00000000
+[    4.708615] <3>-(3)[1:swapper/0]0020  003720bc ffffffc0 003720c4 ffffffc0 00cf72e4 ffffffc0 000001a4 00000000
+[    4.708833] <3>-(3)[1:swapper/0]0040  003720dc ffffffc0 003720b4 ffffffc0 00c0de43 ffffffc0 00000124 00000000
+[    4.709051] <3>-(3)[1:swapper/0]0060  003720dc ffffffc0 00000000 00000000 00000001 00000000 00e50078 ffffffc0
+[    4.709113] <3>-(3)[1:swapper/0]
+[    4.709113] <3>X27: 0xffffffc075a26b80:
+[    4.709333] <3>-(3)[1:swapper/0]6b80  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.709554] <3>-(3)[1:swapper/0]6ba0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.709778] <3>-(3)[1:swapper/0]6bc0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.709998] <3>-(3)[1:swapper/0]6be0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.710220] <3>-(3)[1:swapper/0]6c00  000c0000 6e65736d 00726f73 00000000 00000000 00000000 75a26818 ffffffc0
+[    4.710441] <3>-(3)[1:swapper/0]6c20  75a26860 ffffffc0 75a21600 ffffffc0 75a25600 ffffffc0 75a29038 ffffffc0
+[    4.710662] <3>-(3)[1:swapper/0]6c40  75a26878 ffffffc0 75a26870 ffffffc0 7d92f480 ffffffc0 00e3c908 ffffffc0
+[    4.710877] <3>-(3)[1:swapper/0]6c60  75a281e0 ffffffc0 00000003 00000007 00000000 00000000 00e8f6b0 ffffffc0
+[    4.710940] <3>-(3)[1:swapper/0]
+[    4.710940] <3>X28: 0xffffffc000fc60c0:
+[    4.711156] <3>-(3)[1:swapper/0]60c0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.711377] <3>-(3)[1:swapper/0]60e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.711601] <3>-(3)[1:swapper/0]6100  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.711822] <3>-(3)[1:swapper/0]6120  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.712041] <3>-(3)[1:swapper/0]6140  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.712256] <3>-(3)[1:swapper/0]6160  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.712468] <3>-(3)[1:swapper/0]6180  00000000 00000000 00000000 00000000 00000000 00000000 759dc200 ffffffc0
+[    4.712679] <3>-(3)[1:swapper/0]61a0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.712742] <3>-(3)[1:swapper/0]
+[    4.712742] <3>X29: 0xffffffc00306ba60:
+[    4.712964] <3>-(3)[1:swapper/0]ba60  00ee3000 ffffffc0 74ab05c0 ffffffc0 00a1f000 ffffffc0 00fc6000 ffffffc0
+[    4.713191] <3>-(3)[1:swapper/0]ba80  0306bb78 ffffffc0 0306bb58 ffffffc0 00e50000 ffffffc0 75a26c00 ffffffc0
+[    4.713421] <3>-(3)[1:swapper/0]baa0  00fc6140 ffffffc0 0306bae0 ffffffc0 0037bea0 ffffffc0 0306bae0 ffffffc0
+[    4.713652] <3>-(3)[1:swapper/0]bac0  0037bed0 ffffffc0 60000145 00000000 75a26c00 ffffffc0 00fc6030 ffffffc0
+[    4.713880] <3>-(3)[1:swapper/0]bae0  0306bbb0 ffffffc0 006fb9a8 ffffffc0 00a1fe78 ffffffc0 75a26c00 ffffffc0
+[    4.714104] <3>-(3)[1:swapper/0]bb00  75a26c20 ffffffc0 0037be24 ffffffc0 75a26c04 ffffffc0 00e3c000 ffffffc0
+[    4.714323] <3>-(3)[1:swapper/0]bb20  00000003 00000000 cee19f82 00000000 00fc6028 ffffffc0 00fc6030 ffffffc0
+[    4.714540] <3>-(3)[1:swapper/0]bb40  00fc6028 ffffffc0 00e509f0 ffffffc0 00fc6028 ffffffc0 00000000 00000000
+[    4.714583] <3>-(3)[1:swapper/0]
+[    4.714652] <3>-(3)[1:swapper/0]Process swapper/0 (pid: 1, stack limit = 0xffffffc003068068)
+[    4.714722] <3>-(3)[1:swapper/0]Stack: (0xffffffc00306bae0 to 0xffffffc00306c000)
+[    4.714859] <3>-(3)[1:swapper/0]bae0: 0306bbb0 ffffffc0 006fb9a8 ffffffc0 00a1fe78 ffffffc0 75a26c00 ffffffc0
+[    4.714998] <3>-(3)[1:swapper/0]bb00: 75a26c20 ffffffc0 0037be24 ffffffc0 75a26c04 ffffffc0 00e3c000 ffffffc0
+[    4.715134] <3>-(3)[1:swapper/0]bb20: 00000003 00000000 cee19f82 00000000 00fc6028 ffffffc0 00fc6030 ffffffc0
+[    4.715273] <3>-(3)[1:swapper/0]bb40: 00fc6028 ffffffc0 00e509f0 ffffffc0 00fc6028 ffffffc0 00000000 00000000
+[    4.715407] <3>-(3)[1:swapper/0]bb60: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.715544] <3>-(3)[1:swapper/0]bb80: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.715683] <3>-(3)[1:swapper/0]bba0: 00000000 00000000 00000000 00000000 0306bbf0 ffffffc0 0030e2f0 ffffffc0
+[    4.715820] <3>-(3)[1:swapper/0]bbc0: 75a26c20 ffffffc0 00eda000 ffffffc0 00e50a68 ffffffc0 00000000 00000000
+[    4.715958] <3>-(3)[1:swapper/0]bbe0: 00fb3000 ffffffc0 00eda000 ffffffc0 0306bc40 ffffffc0 0030e5e8 ffffffc0
+[    4.716096] <3>-(3)[1:swapper/0]bc00: 75a26c20 ffffffc0 75a26c80 ffffffc0 00e50a68 ffffffc0 00e3c000 ffffffc0
+[    4.716231] <3>-(3)[1:swapper/0]bc20: 00e8f730 ffffffc0 00ee3098 ffffffc0 00ee3688 ffffffc0 00000000 00000000
+[    4.716363] <3>-(3)[1:swapper/0]bc40: 0306bc70 ffffffc0 0030c900 ffffffc0 00000000 00000000 00e50a68 ffffffc0
+[    4.716496] <3>-(3)[1:swapper/0]bc60: 0030e584 ffffffc0 009a2568 ffffffc0 0306bcb0 ffffffc0 0030e6bc ffffffc0
+[    4.716630] <3>-(3)[1:swapper/0]bc80: 00e50a68 ffffffc0 00000000 00000000 74aae780 ffffffc0 009930f8 ffffffc0
+[    4.716767] <3>-(3)[1:swapper/0]bca0: 0315d4a8 ffffffc0 75a21668 ffffffc0 0306bcc0 ffffffc0 0030d1f4 ffffffc0
+[    4.716904] <3>-(3)[1:swapper/0]bcc0: 0306bd00 ffffffc0 0030f050 ffffffc0 00e50a68 ffffffc0 00ee3000 ffffffc0
+[    4.717042] <3>-(3)[1:swapper/0]bce0: 00fc6000 ffffffc0 00c118c5 ffffffc0 00c118e2 ffffffc0 0306bd60 ffffffc0
+[    4.717182] <3>-(3)[1:swapper/0]bd00: 0306bd30 ffffffc0 006fc8f4 ffffffc0 00e50a20 ffffffc0 00ee3000 ffffffc0
+[    4.717323] <3>-(3)[1:swapper/0]bd20: 00fc6000 ffffffc0 0306bd60 ffffffc0 0306bd50 ffffffc0 0037c5f8 ffffffc0
+[    4.717463] <3>-(3)[1:swapper/0]bd40: 00000000 00000000 00020000 00000000 0306bd60 ffffffc0 00da6228 ffffffc0
+[    4.717602] <3>-(3)[1:swapper/0]bd60: 0306bdd0 ffffffc0 00d7ca6c ffffffc0 00da5fd4 ffffffc0 74ab0280 ffffffc0
+[    4.717740] <3>-(3)[1:swapper/0]bd80: cd348304 00000000 cedc170b 00000000 00000000 00000000 00dd4640 ffffffc0
+[    4.717878] <3>-(3)[1:swapper/0]bda0: 00d7c274 ffffffc0 00dd45c0 ffffffc0 00f64000 ffffffc0 00de17a8 ffffffc0
+[    4.718013] <3>-(3)[1:swapper/0]bdc0: 00dd3560 ffffffc0 00000000 00000000 0306be50 ffffffc0 00d7cc84 ffffffc0
+[    4.718147] <3>-(3)[1:swapper/0]bde0: 00000154 00000000 00d70928 ffffffc0 00f64000 ffffffc0 00000007 00000000
+[    4.718282] <3>-(3)[1:swapper/0]be00: 00dd45f8 ffffffc0 00dd4640 ffffffc0 00d7c200 ffffffc0 00dd45c0 ffffffc0
+[    4.718414] <3>-(3)[1:swapper/0]be20: 00f64000 ffffffc0 00de16b8 ffffffc0 00e14498 ffffffc0 009ff668 ffffffc0
+[    4.718548] <3>-(3)[1:swapper/0]be40: 00000007 00000007 00d733a8 ffffffc0 0306beb0 ffffffc0 009934e8 ffffffc0
+[    4.718679] <3>-(3)[1:swapper/0]be60: 00f64000 ffffffc0 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.718809] <3>-(3)[1:swapper/0]be80: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.718943] <3>-(3)[1:swapper/0]bea0: 00000000 00000000 00000000 00000000 00000000 00000000 000844a0 ffffffc0
+[    4.719077] <3>-(3)[1:swapper/0]bec0: 009934d4 ffffffc0 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.719212] <3>-(3)[1:swapper/0]bee0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.719348] <3>-(3)[1:swapper/0]bf00: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.719484] <3>-(3)[1:swapper/0]bf20: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.719617] <3>-(3)[1:swapper/0]bf40: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.719752] <3>-(3)[1:swapper/0]bf60: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.719885] <3>-(3)[1:swapper/0]bf80: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.720017] <3>-(3)[1:swapper/0]bfa0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    4.720148] <3>-(3)[1:swapper/0]bfc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000005 00000000
+[    4.720280] <3>-(3)[1:swapper/0]bfe0: 00000000 00000000 00000000 00000000 ffffffff 3fffffff ffffffef ffffbfff
+[    4.720324] <3>-(3)[1:swapper/0]Call trace:
+[    4.720430] <3>-(3)[1:swapper/0][<ffffffc00037bed0>] akm09911_i2c_probe+0xac/0x3a8
+[    4.720529] <3>-(3)[1:swapper/0][<ffffffc0006fb9a8>] i2c_device_probe+0xf0/0x124
+[    4.720627] <3>-(3)[1:swapper/0][<ffffffc00030e2f0>] driver_probe_device+0x168/0x3b0
+[    4.720723] <3>-(3)[1:swapper/0][<ffffffc00030e5e8>] __driver_attach+0x64/0x90
+[    4.720816] <3>-(3)[1:swapper/0][<ffffffc00030c900>] bus_for_each_dev+0x74/0x90
+[    4.720913] <3>-(3)[1:swapper/0][<ffffffc00030e6bc>] driver_attach+0x20/0x28
+[    4.721008] <3>-(3)[1:swapper/0][<ffffffc00030d1f4>] bus_add_driver+0x11c/0x1f4
+[    4.721110] <3>-(3)[1:swapper/0][<ffffffc00030f050>] driver_register+0xc0/0x10c
+[    4.721216] <3>-(3)[1:swapper/0][<ffffffc0006fc8f4>] i2c_register_driver+0x4c/0xd0
+[    4.721325] <3>-(3)[1:swapper/0][<ffffffc00037c5f8>] akm09911_local_init+0x1c/0x5c
+[    4.721421] <3>-(3)[1:swapper/0][<ffffffc000da6228>] mag_init+0x254/0x58c
+[    4.721537] <3>-(3)[1:swapper/0][<ffffffc000d7ca6c>] do_one_initcall+0xe4/0x1b4
+[    4.721654] <3>-(3)[1:swapper/0][<ffffffc000d7cc84>] kernel_init_freeable+0x148/0x1e4
+[    4.721747] <3>-(3)[1:swapper/0][<ffffffc0009934e8>] kernel_init+0x14/0xe4
+[    4.721853] <3>-(3)[1:swapper/0]Code: 912ccc21 f90037a3 f9400460 f90006a0 (b9400400) 
+[    4.721915] <3>-(3)[1:swapper/0]---[ end trace 015ff5c357bc30a8 ]---
+[    5.277491] <3>-(3)[1:swapper/0]Kernel panic - not syncing: Fatal exception
+[    6.774605] <3>-(3)[1:swapper/0]SMP: failed to stop secondary CPUs
+[    6.775026] <3>-(3)[1:swapper/0]mrdump: cpu[3] tsk:ffffffc003052000 ti:ffffffc003068000
+[    6.776226] <3>-(3)[1:swapper/0]same process path
+[    6.779348] <3>-(3)[1:swapper/0][name:ipanic&]kernel log region: [15804:f78,1c0f4:1080]
+[    6.779381] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    6.779447] <3>-(3)[1:swapper/0]ipanic_data_to_sd: dump SYS_KERNEL_LOG failed[-1]
+[    6.779769] <3>-(3)[1:swapper/0][name:ipanic&]kernel log region: [1c0f4:1080,1c1e0:1083]
+[    6.779801] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    6.779866] <3>-(3)[1:swapper/0]ipanic_data_to_sd: dump _exp_detail.txt failed[-1]
+[    6.780070] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    6.780132] <3>-(3)[1:swapper/0]ipanic_data_to_sd: dump PROC_CUR_TSK failed[-1]
+[    6.780796] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    6.780860] <3>-(3)[1:swapper/0]ipanic_header_to_sd: failed[a--1]
+[    6.780920] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    6.780985] <3>-(3)[1:swapper/0]ipanic_header_to_sd: failed[b--1]
+[    6.781046] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    6.781110] <3>-(3)[1:swapper/0]ipanic_header_to_sd: failed[c--1]
+[    6.781171] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    6.781237] <3>-(3)[1:swapper/0]ipanic_header_to_sd: failed[d--1]
+[    6.781286] <3>-(3)[1:swapper/0]
+[    6.781286] <3> No log for WDT
+[    6.782296] <3>-(3)[1:swapper/0][name:ipanic&]kernel log region: [1c1e0:1083,1c5a4:1091]
+[    6.782328] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    6.782390] <3>-(3)[1:swapper/0]ipanic_data_to_sd: dump SYS_WDT_LOG failed[-1]
+[    6.782509] <3>-(3)[1:swapper/0][name:ipanic&]kernel log region: [1c5a4:1091,1c690:1094]
+[    6.782540] <3>-(3)[1:swapper/0]ipanic_data_to_sd: dump SYS_WQ_LOG failed[-3]
+[    6.782603] <3>-(3)[1:swapper/0]MMP: MMProfileForceStart(): start: 0
+[    6.782704] <3>-(3)[1:swapper/0]ipanic_mmprofile: INVALID MMProfile size[3024c4]
+[    6.782734] <3>-(3)[1:swapper/0]ipanic_data_to_sd: dump SYS_MMPROFILE failed[-3]
+[    6.782910] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    6.782973] <3>-(3)[1:swapper/0]ipanic_data_to_sd: dump SYS_ATF_LOG failed[-1]
+[    6.783060] <3>-(3)[1:swapper/0][name:disp_recorder&]AEE input dump buffer type=0, size=4096, offset=0
+[    6.783124] <3>-(3)[1:swapper/0][name:disp_recorder&]err_buffer is NULL, skip it
+[    6.783189] <3>-(3)[1:swapper/0][name:disp_recorder&]fence_buffer is NULL, skip it
+[    6.783252] <3>-(3)[1:swapper/0][name:disp_recorder&]dbg_buffer is NULL, skip it
+[    6.783316] <3>-(3)[1:swapper/0][name:disp_recorder&]dump_buffer is NULL, skip it
+[    6.783384] <3>-(3)[1:swapper/0][name:disp_recorder&]AEE dump log_type is DPREC_LOGGER_PR_NUM, And it means End.
+[    6.783439] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    6.783503] <3>-(3)[1:swapper/0]ipanic_header_to_sd: failed[10--1]
+[    6.783575] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    6.783637] <3>-(3)[1:swapper/0]ipanic_header_to_sd: failed[0--1]
+[    6.784797] <3>-(3)[1:swapper/0][name:ipanic&]kernel log region: [1c690:1094,1cbf0:10a5]
+[    6.784830] <3>-(3)[1:swapper/0]not find in scatter file error!
+[    6.784894] <3>-(3)[1:swapper/0]ipanic_data_to_sd: dump SYS_LAST_LOG failed[-1]
+[    6.785006] <3>-(3)[1:swapper/0][name:ipanic&]ipanic done^_^
+[    6.785087] <3>-(3)[1:swapper/0][name:ipanic&]SYS_MINI_RDUMP[1e3000@62200],
+[    6.785171] <3>-(3)[1:swapper/0][name:ipanic&]SYS_MAIN_LOG_RAW[0@465600],
+[    6.785256] <3>-(3)[1:swapper/0][name:ipanic&]SYS_SYSTEM_LOG_RAW[0@4a5800],
+[    6.785341] <3>-(3)[1:swapper/0][name:ipanic&]SYS_EVENTS_LOG_RAW[0@4e5a00],
+[    6.785424] <3>-(3)[1:swapper/0][name:ipanic&]SYS_RADIO_LOG_RAW[0@525c00],
+[    6.785490] <3>-(3)[1:swapper/0][name:ipanic&]SYS_DISP_LOG[0@58e200],
+[    6.785523] <3>-(3)[1:swapper/0][name:ipanic&]^_^
+[    8.377613] Rebooting in 1 seconds..
+[   10.875340] <3>-(3)[1:swapper/0]SMP: failed to stop secondary CPUs
+[   10.876303] <3>-(3)[1:swapper/0]machine_restart, arm_pm_restart(          (null))
+[   10.877389] <3>-(3)[1:swapper/0]ARCH_RESET happen!!!
+[   10.878158] <3>-(3)[1:swapper/0]arch_reset: cmd = NULL
+[   10.879005] <3>-(3)[1:swapper/0]CPU: 3 PID: 1 Comm: swapper/0 Tainted: G      D W      3.18.35+ #1
+[   10.880284] <3>-(3)[1:swapper/0]Hardware name: MT6737 (DT)
+[   10.881111] <3>-(3)[1:swapper/0]Call trace:
+[   10.881851] <3>-(3)[1:swapper/0][<ffffffc000088dd0>] dump_backtrace+0x0/0x140
+[   10.882954] <3>-(3)[1:swapper/0][<ffffffc000088f24>] show_stack+0x14/0x1c
+[   10.884017] <3>-(3)[1:swapper/0][<ffffffc000997e98>] dump_stack+0x80/0xa4
+[   10.885058] <3>-(3)[1:swapper/0][<ffffffc00071169c>] arch_reset+0x48/0xf4
+[   10.886104] <3>-(3)[1:swapper/0][<ffffffc000711778>] mtk_arch_reset_handle+0x30/0x48
+[   10.887279] <3>-(3)[1:swapper/0][<ffffffc0000b7990>] notifier_call_chain+0x158/0x26c
+[   10.888459] <3>-(3)[1:swapper/0][<ffffffc0000b7b84>] __atomic_notifier_call_chain+0x3c/0x50
+[   10.889715] <3>-(3)[1:swapper/0][<ffffffc0000b7bac>] atomic_notifier_call_chain+0x14/0x1c
+[   10.890949] <3>-(3)[1:swapper/0][<ffffffc0000b8c34>] do_kernel_restart+0x20/0x28
+[   10.892079] <3>-(3)[1:swapper/0][<ffffffc000085ad0>] machine_restart+0x54/0x64
+[   10.893192] <3>-(3)[1:swapper/0][<ffffffc0000b8b48>] emergency_restart+0x18/0x20
+[   10.894324] <3>-(3)[1:swapper/0][<ffffffc000997060>] panic+0x1a4/0x208
+[   10.895350] <3>-(3)[1:swapper/0][<ffffffc0000890a4>] die+0x178/0x1a0
+[   10.896359] <3>-(3)[1:swapper/0][<ffffffc000996eac>] __do_kernel_fault.part.6+0x74/0x84
+[   10.897578] <3>-(3)[1:swapper/0][<ffffffc000095afc>] do_page_fault+0x2e8/0x334
+[   10.898700] <3>-(3)[1:swapper/0][<ffffffc000095b94>] do_translation_fault+0x4c/0xe0
+[   10.899845] <3>-(3)[1:swapper/0][<ffffffc00008128c>] do_mem_abort+0x3c/0xe4
+[   10.900888] <3>-(3)[1:swapper/0]Exception stack(0xffffffc00306b920 to 0xffffffc00306ba40)
+[   10.902148] <3>-(3)[1:swapper/0]b920: 00fc6078 ffffffc0 03068000 ffffffc0 0306bae0 ffffffc0 0037bed0 ffffffc0
+[   10.903631] <3>-(3)[1:swapper/0]b940: 0306bb58 ffffffc0 cee19f82 00000000 75a26c00 ffffffc0 00fc6030 ffffffc0
+[   10.905112] <3>-(3)[1:swapper/0]b960: 00000000 ffffffc0 000c000c 00000000 00000000 00000000 00000000 00000000
+[   10.906594] <3>-(3)[1:swapper/0]b980: 0306ba30 ffffffc0 0306ba30 ffffffc0 0306b9f0 ffffffc0 ffffffc8 00000000
+[   10.908073] <3>-(3)[1:swapper/0]b9a0: 0306ba30 ffffffc0 002d5c64 ffffffc0 0306ba30 ffffffc0 0306ba30 ffffffc0
+[   10.909552] <3>-(3)[1:swapper/0]b9c0: 00000000 00000000 00c12b33 ffffffc0 00fc6140 ffffffc0 00e509f0 ffffffc0
+[   10.911036] <3>-(3)[1:swapper/0]b9e0: 00000000 00000000 00000140 00000000 74ab05c0 ffffffc0 00000000 00000000
+[   10.912519] <3>-(3)[1:swapper/0]ba00: 74ab0600 ffffffc0 7f7f7f7f 7f7f7f7f fefeff2f fefefefe 7f7f7f7f 7f7f7f7f
+[   10.913996] <3>-(3)[1:swapper/0]ba20: 01010101 01010101 00000008 00000000 fffffffe 0fffffff 00000000 00000000
+[   10.915434] <3>-(3)[1:swapper/0][<ffffffc000083c68>] el1_da+0x18/0x80
+[   10.916437] <3>-(3)[1:swapper/0][<ffffffc0006fb9a8>] i2c_device_probe+0xf0/0x124
+[   10.917561] <3>-(3)[1:swapper/0][<ffffffc00030e2f0>] driver_probe_device+0x168/0x3b0
+[   10.918730] <3>-(3)[1:swapper/0][<ffffffc00030e5e8>] __driver_attach+0x64/0x90
+[   10.919825] <3>-(3)[1:swapper/0][<ffffffc00030c900>] bus_for_each_dev+0x74/0x90
+[   10.920936] <3>-(3)[1:swapper/0][<ffffffc00030e6bc>] driver_attach+0x20/0x28
+[   10.922009] <3>-(3)[1:swapper/0][<ffffffc00030d1f4>] bus_add_driver+0x11c/0x1f4
+[   10.923123] <3>-(3)[1:swapper/0][<ffffffc00030f050>] driver_register+0xc0/0x10c
+[   10.924238] <3>-(3)[1:swapper/0][<ffffffc0006fc8f4>] i2c_register_driver+0x4c/0xd0
+[   10.925388] <3>-(3)[1:swapper/0][<ffffffc00037c5f8>] akm09911_local_init+0x1c/0x5c
+[   10.926532] <3>-(3)[1:swapper/0][<ffffffc000da6228>] mag_init+0x254/0x58c
+[   10.927590] <3>-(3)[1:swapper/0][<ffffffc000d7ca6c>] do_one_initcall+0xe4/0x1b4
+[   10.928723] <3>-(3)[1:swapper/0][<ffffffc000d7cc84>] kernel_init_freeable+0x148/0x1e4
+[   10.929894] <3>-(3)[1:swapper/0][<ffffffc0009934e8>] kernel_init+0x14/0xe4
+[   10.930920] <3>-(3)[1:swapper/0][name:mtk_wdt&]wdt_arch_reset called@Kernel mode =
+$$
